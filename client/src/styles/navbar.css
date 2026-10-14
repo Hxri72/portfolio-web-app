@@ -1,0 +1,149 @@
+/* floating glass bar */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  padding-top: 14px;
+}
+
+.navbar-inner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  height: 64px;
+  padding: 0 10px 0 12px;
+  background: var(--bg-soft);
+  backdrop-filter: blur(16px) saturate(160%);
+  -webkit-backdrop-filter: blur(16px) saturate(160%);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  transition: box-shadow 0.3s, border-color 0.3s;
+}
+
+.navbar.scrolled .navbar-inner {
+  box-shadow: var(--shadow);
+  border-color: color-mix(in srgb, var(--primary) 25%, var(--border));
+}
+
+/* logo */
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-heading);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: -0.02em;
+}
+
+.logo-mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: var(--gradient);
+  color: #fff;
+  font-size: 17px;
+  box-shadow: 0 4px 14px var(--glow-1);
+}
+
+/* links sit in a segmented pill */
+.nav-links {
+  display: flex;
+  gap: 2px;
+  padding: 4px;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--text) 4%, transparent);
+  border: 1px solid var(--border);
+}
+
+.nav-links a {
+  color: var(--text-muted);
+  font-size: 14px;
+  font-weight: 500;
+  padding: 7px 16px;
+  border-radius: 999px;
+  transition: color 0.2s, background 0.2s, box-shadow 0.2s;
+}
+
+.nav-links a:hover {
+  color: var(--text);
+  background: color-mix(in srgb, var(--text) 5%, transparent);
+}
+
+.nav-links a.active {
+  color: var(--text);
+  background: var(--card);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), inset 0 0 0 1px var(--border);
+}
+
+/* right side */
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.nav-actions .icon-btn {
+  border-radius: 50%;
+}
+
+.nav-resume {
+  border: none;
+  border-radius: 999px;
+  padding: 10px 18px;
+  background: var(--gradient);
+  box-shadow: 0 4px 14px var(--glow-1);
+}
+
+.menu-btn {
+  display: none;
+}
+
+@media (max-width: 420px) {
+  .nav-resume {
+    display: none;
+  }
+}
+
+/* tablet: drop the name next to the logo mark to make room */
+@media (min-width: 769px) and (max-width: 960px) {
+  .logo-text {
+    display: none;
+  }
+}
+
+/* mobile menu drops down as a rounded card */
+@media (max-width: 768px) {
+  .menu-btn {
+    display: inline-flex;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    gap: 4px;
+    padding: 10px;
+    border-radius: 20px;
+    background: var(--bg);
+    box-shadow: var(--shadow);
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-links a {
+    padding: 12px 16px;
+    border-radius: 12px;
+  }
+}

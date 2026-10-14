@@ -1,0 +1,80 @@
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  gap: 20px;
+}
+
+.about-grid h3 {
+  font-size: 20px;
+  margin-bottom: 16px;
+}
+
+.about-bio p {
+  color: var(--text-muted);
+  margin-bottom: 12px;
+  font-size: 16px;
+}
+
+.about-facts ul {
+  list-style: none;
+}
+
+.about-facts li {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 0;
+  border-bottom: 1px dashed var(--border);
+  font-size: 15px;
+}
+
+.about-facts li:last-child {
+  border-bottom: none;
+}
+
+.about-facts span {
+  color: var(--text-muted);
+}
+
+.about-facts strong {
+  font-weight: 500;
+  text-align: right;
+}
+
+.education-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.education-card {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.education-card:hover {
+  transform: translateY(-4px);
+}
+
+.edu-year {
+  color: var(--primary);
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.education-card h4 {
+  font-size: 18px;
+  margin: 2px 0;
+}
+
+.education-card p {
+  color: var(--text-muted);
+  font-size: 14px;
+}
+
+@media (max-width: 800px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+}
