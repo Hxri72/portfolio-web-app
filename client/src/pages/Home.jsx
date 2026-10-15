@@ -27,7 +27,7 @@ function CodeCard({ profile }) {
           <span className="c-key">const</span> hari = {"{"}
           {"\n"}  role: <span className="c-str">"Software Engineer"</span>,
           {"\n"}  experience: <span className="c-str">"3+ years"</span>,
-          {"\n"}  location: <span className="c-str">"Trivandrum, Kerala"</span>,
+          {"\n"}  location: <span className="c-str">"Kozhikode, Kerala"</span>,
           {"\n"}  focus: [
           {profile.focus.map((item, i) => (
             <span key={item}>

@@ -14,7 +14,7 @@ const profile = {
     "Outside work I build my own projects - a trading alert system based on Fair Value Gap rules, an AI-powered task manager and a prompt-to-video engine for YouTube Shorts.",
     "I enjoy owning features end to end - building interfaces people find easy to use, the systems behind them that keep working, integrating third-party services and shipping software that people actually use.",
   ],
-  location: "Trivandrum, Kerala, India",
+  location: "Kozhikode, Kerala, India",
   email: "hariprasad72172@gmail.com",
   phone: "+91 8848576772",
   resumeUrl: "/resume.pdf",
@@ -48,7 +48,7 @@ const profile = {
     },
   ],
   facts: [
-    { label: "Location", value: "Trivandrum, Kerala" },
+    { label: "Location", value: "Kozhikode, Kerala" },
     { label: "Experience", value: "3+ years" },
     { label: "Last role", value: "Software Engineer (Full Stack)" },
     { label: "Last company", value: "Haspaces Technology Solutions" },
